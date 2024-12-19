@@ -1,0 +1,68 @@
+-- The Artist with the most earnings
+SELECT 
+    ar.Name AS ArtistName,
+    SUM(il.UnitPrice * il.Quantity) AS TotalEarnings
+FROM 
+    Artist AS ar
+JOIN 
+    Album AS al ON ar.ArtistId = al.ArtistId
+JOIN 
+    Track AS t ON al.AlbumId = t.AlbumId
+JOIN 
+    InvoiceLine AS il ON t.TrackId = il.TrackId
+GROUP BY 
+    ar.Name
+ORDER BY 
+    TotalEarnings DESC;
+
+
+
+
+-- Most Popular Albums by Total Revenue
+SELECT 
+    a.Title AS AlbumTitle,
+    SUM(il.Quantity * il.UnitPrice) AS TotalRevenue
+FROM 
+    Album a
+JOIN 
+    Track t ON a.AlbumId = t.AlbumId
+JOIN 
+    InvoiceLine il ON t.TrackId = il.TrackId
+GROUP BY 
+    a.Title
+ORDER BY 
+    TotalRevenue DESC;
+
+
+
+
+--Total Sales by Genre
+SELECT 
+    g.Name AS Genre, 
+    SUM(il.UnitPrice * il.Quantity) AS TotalSales
+FROM 
+    InvoiceLine il
+JOIN 
+    Track t ON il.TrackId = t.TrackId
+JOIN 
+    Genre g ON t.GenreId = g.GenreId
+GROUP BY 
+    g.Name
+ORDER BY 
+    TotalSales DESC;
+
+
+--  Total Sales by Media Type
+SELECT 
+    mt.Name AS MediaType, 
+    SUM(il.UnitPrice * il.Quantity) AS TotalSales
+FROM 
+    InvoiceLine il
+JOIN 
+    Track t ON il.TrackId = t.TrackId
+JOIN 
+    MediaType mt ON t.MediaTypeId = mt.MediaTypeId
+GROUP BY 
+    mt.Name
+ORDER BY 
+    TotalSales DESC;
