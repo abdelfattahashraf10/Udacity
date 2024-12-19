@@ -62,11 +62,9 @@ Here are the key Tableau visualizations used in the project:
 
 To explore the analysis:
 
-1. **View the Dashboards**:
+**View the Dashboards**:
    Access the interactive dashboards on Tableau Public:
    - [Poverty and Income Dashboard](./visuals/Poverty%20and%20Income%20Dashboard.png)
    - [Transportation and Construction Dashboard](./visuals/Transportation%20and%20Construction%20Dashboard.png)
 
-2. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/yourusername/tableau-visualization-project.git
+
