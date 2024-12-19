@@ -16,7 +16,7 @@ The analysis focuses on two primary dashboards:
 - **Highest Poverty States**:
   - States like **Texas** and **Puerto Rico** lead with significant poverty counts, followed by **Georgia** and **Kentucky**.
 - **Most Income States**:
-  - Texas, Virginia, and Georgia emerge as the states with the highest income levels.
+  - Texas, Virginia, and Georgia emerged as the states with the highest income levels.
 - **Income and Poverty Across America**:
   - A scatter plot reveals an inverse relationship: states with higher average income generally show lower poverty levels.
 - **Main Story**:
